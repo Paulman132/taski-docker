@@ -51,7 +51,7 @@ jobs:
         python -m flake8 backend/
         cd backend/
         python manage.py test
-        
+
   build_and_push_to_docker_hub:
     name: Push Docker image to DockerHub
     runs-on: ubuntu-latest
@@ -86,5 +86,5 @@ jobs:
           # Для каждого пересобранного образа 
           # устанавливаем тег latest, чтобы потом
           # на сервере и в docker-compose.yml не указывать версию
-          tags: ${{ secrets.DOCKER_USERNAME }}/taski_backend:latest
+          tags: paul1727/taski_backend:latest
  
